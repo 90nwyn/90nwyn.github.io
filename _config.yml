@@ -1,5 +1,5 @@
 title: 90n #博客标题
-description: Just For Fun. #博客描述
+description: 偷得浮生半日闲 #博客描述
 keywords: blog,wyn #博客关键字
 author: "90NWYN"
 
@@ -17,8 +17,8 @@ PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议�
 paginate: 8 #同时显示的最大文章数，超过自动分页
 paginate_path: "page:num"
 
-background: https://api.dujin.org/bing/1920.php
-theme_color: 546E7A
+background: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565899044866&di=9a264490f40f4023ac6714e2a1df018d&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201507%2F30%2F20150730170039_Ah3R5.jpeg
+theme_color: 4169E1
 
 google_analytics:
 # hydrogen-blog date format
