@@ -1,4 +1,4 @@
-title: 90NWYN.BLOG #博客标题
+title: 90NWYN #博客标题
 description: 偷得浮生半日闲 #博客描述
 keywords: wyn #博客关键字
 author: "90NWYN"
@@ -14,7 +14,7 @@ buildtime: "1565885812" #博客建立时的时间戳 可进入https://tool.lu/ti
 
 PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议开启）
 
-paginate: 12 #同时显示的最大文章数，超过自动分页
+paginate: 8 #同时显示的最大文章数，超过自动分页
 paginate_path: "page:num"
 
 background: https://api.dujin.org/bing/1920.php
