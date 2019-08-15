@@ -1,88 +1,46 @@
-# Site settings
-title: "MADness"
-description: A Template for Jekyll
+title: Link #博客标题
+description: Just 4 Fun. #博客描述
+keywords: blog,css,html,php #博客关键字
+author: "Link"
 
-# Files
-baseurl:
-pagesdir: pages
-assets:
-  libs: assets/libs
-  owner: assets/owner
-logo: logo.png
-discus_shortname: MADness
-email: mad@ness.com
-url: "http://madforjekyll.github.io"
-search: true
-share: true
-comments: true
+#title hide and show
+hide: (つェ⊂)我藏好啦
+show: ´∇｀ 呀被发现啦~ 
 
-# Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
-readtime: true
+baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "hydrogen.atlinker.cn" # change this to the base hostname & protocol for your site
+buildtime: "1514736000" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
+           #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
 
-# Specify the average Words per minute. If not defined, 180 will be used
-wpm: 200
+PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议开启）
 
-# Owner/author information
-owner:
-  name:   MADness
-  avatar: avatar.jpg
-  # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    MAD for Jekyll
+paginate: 8 #同时显示的最大文章数，超过自动分页
+paginate_path: "page:num"
 
-# Social networking links used in footer. Update and remove as you like.
-twitter_username: MAD4Jekyll
-facebook_username: MAD4Jekyll
-github_username: MAD4Jekyll
-deviantart_username: MAD4Jekyll
-500px_username: MAD4Jekyll
-flickr_username: MAD4Jekyll
-instagram_username: MAD4Jekyll
+background: https://api.dujin.org/bing/1920.php
+theme_color: 546E7A
 
- 
-# Internal nav
-nav:
- writing: "root_url/writing/"
- gallery: "root_url/gallery/"
- about: "root_url/about/"
+google_analytics:
+# hydrogen-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+hydrogen-blog:
+  date_format: "%b %-d, %Y"
 
+#MathJax switch
+MathJax: false
 
-# Server
-destination:      	 ./_site
-port:             	 4000
+#install emoji
+plugins:
+  - jemoji
 
-
-#dependencies
-# Gems
-gems:
-  - jekyll-paginate
-
-
-# Build settings
-highlighter:         rouge
-markdown:           kramdown
-kramdown:
-    extensions:     
-     - Hard_wrap
-     - no_intra_emphasis
-     - strikethrough
-     - fenced_code_blocks
-     - autolink
-     - tables
-     - with_toc_data
-     - highlight
-     - footnotes
-    input:          GFM
-sass:
-    style:          :compressed
-paginate: 5
-paginate_path: "/writing/page:num/"
-permalink: "/writing/:title/"
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-slugify: "pretty"
-
-
-# Analytics and webmaster tools stuff goes here
-google_analytics:   UA-xxxxxxxx-x
-google_verify:      
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+# social account
+image:
+twitter:
+  username:
+#  site:
+facebook:
+  #publisher: null
+  #profile_id: null
+  app_id: null
+  #authors: null
+#  admins:
