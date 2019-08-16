@@ -1,46 +1,46 @@
-title: 90n #博客标题
-description: 偷得浮生半日闲 #博客描述
-keywords: blog,wyn #博客关键字
-author: "90NWYN"
+# Header
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  Categories: /categories
+  Github:
+    url: https://github.com/klugjo/hexo-theme-clean-blog
+    icon: github
 
-#title hide and show
-hide: (つェ⊂)我藏好啦
-show: ´∇｀ 呀被发现啦~ 
+# Title on top left of menu. Leave empty to use main blog title
+menu_title: Configurable Title
 
-baseurl: "" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "90nwyn.github.io" # change this to the base hostname & protocol for your site
-buildtime: "1514736000" #博客建立时的时间戳 可进入https://tool.lu/timestamp/将博客建立时的日期转换成时间戳
-           #The timestamp at the time of blog establishment can be entered at https://tool.lu/timestamp/to convert the date at the time of blog establishment into a timestamp.
+# URL of the Home page image
+index_cover: http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/img/home-bg.jpg
 
-PJAX: true #启用PJAX，会与评论系统冲突（如不用评论系统建议开启）
+# Default post title
+default_post_title: Untitled
 
-paginate: 8 #同时显示的最大文章数，超过自动分页
-paginate_path: "page:num"
+# Comments. Choose one by filling up the information
+comments:
+  # Disqus comments
+  disqus_shortname:
+  # Facebook comments
+  facebook:
+    appid:
+    comment_count: 5
+    comment_colorscheme: light
 
-background: https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1565899044866&di=9a264490f40f4023ac6714e2a1df018d&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201507%2F30%2F20150730170039_Ah3R5.jpeg
-theme_color: 4169E1
-
+# Google Analytics Tracking ID
 google_analytics:
-# hydrogen-blog date format
-# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-hydrogen-blog:
-  date_format: "%b %-d, %Y"
 
-#MathJax switch
-MathJax: false
+# Addthis ID
+addthis:
 
-#install emoji
-plugins:
-  - jemoji
+# set your own favicon
+favicon:
 
-# social account
-image:
-twitter:
-  username:
-#  site:
-facebook:
-  #publisher: null
-  #profile_id: null
-  app_id: null
-  #authors: null
-#  admins:
+# Social Accounts
+twitter_url:
+twitter_handle:
+facebook_url:
+github_url: https://github.com/klugjo/hexo-theme-clean-blog
+gitlab_url:
+linkedin_url:
+mailto:
