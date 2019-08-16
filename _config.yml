@@ -1,6 +1,6 @@
 # Site settings
-title: "MADness"
-description: A Template for Jekyll
+title: "90NWYN"
+description: Just For Fun
 
 # Files
 baseurl:
@@ -9,9 +9,9 @@ assets:
   libs: assets/libs
   owner: assets/owner
 logo: logo.png
-discus_shortname: MADness
-email: mad@ness.com
-url: "http://madforjekyll.github.io"
+discus_shortname: 90NWYN
+email: 524451487@qq.com
+url: "http://90nwyn.github.io"
 search: true
 share: true
 comments: true
@@ -24,19 +24,19 @@ wpm: 200
 
 # Owner/author information
 owner:
-  name:   MADness
+  name:   90NWYN
   avatar: avatar.jpg
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:    MAD for Jekyll
+  description:    my blog
 
 # Social networking links used in footer. Update and remove as you like.
-twitter_username: MAD4Jekyll
-facebook_username: MAD4Jekyll
-github_username: MAD4Jekyll
-deviantart_username: MAD4Jekyll
-500px_username: MAD4Jekyll
-flickr_username: MAD4Jekyll
-instagram_username: MAD4Jekyll
+twitter_username: 90NWYN
+facebook_username: 90NWYN90NWYN
+github_username: 90NWYN
+deviantart_username: 90NWYN
+500px_username: 90NWYN
+flickr_username: 90NWYN
+instagram_username: 90NWYN
 
  
 # Internal nav
