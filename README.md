@@ -1,244 +1,245 @@
-# Clean Blog Hexo
+# Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
-![](http://www.codeblocq.com/img/hexo-theme-thumbnail/CleanBlog.png)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/)
 
-Hexo implementation of [Clean Blog](http://blackrockdigital.github.io/startbootstrap-clean-blog/index.html)
+<https://jarrekk.github.io/Jalpc/>
 
-Clean blog is a full featured, responsive Hexo theme. [Demo here](http://www.codeblocq.com/assets/projects/hexo-theme-clean-blog/).
+<http://www.jarrekk.com>  -- Personal website
 
-## Features
+![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
 
-- Disqus and Facebook comments
-- Google Analytics
-- Addthis
-- Cover image for posts and pages
-- Tags and Categories Support
-- Responsive Images
-- Image Gallery
-- Code syntax highlighting
+- [3 steps to setup this theme at your website!](#3-steps-to-setup-this-theme-at-your-website)
+- [Features](#features)
+  - [Index page](#index-page)
+    - [`_data/*.yml`](#_datayml)
+  - [Chart Skills](#chart-skills)
+  - [Categories in blog page](#categories-in-blog-page)
+  - [Pagination](#pagination)
+  - [Page views counter](#page-views-counter)
+  - [Multilingual Page](#multilingual-page)
+  - [Web analytics](#web-analytics)
+  - [Comment](#comment)
+  - [Share](#share)
+  - [Search engines](#search-engines)
+  - [Compress CSS and JS files](#compress-css-and-js-files)
+- [Put in a Jalpc Plug](#put-in-a-jalpc-plug)
+- [Upgrading Jalpc](#upgrading-jalpc)
+  - [Ensure there's an upstream remote](#ensure-theres-an-upstream-remote)
+  - [Pull in the latest changes](#pull-in-the-latest-changes)
+- [Todo](#todo)
+- [Donate Jalpc](#donate-jalpc)
+- [Wiki](#wiki)
+- [Ad](#ad)
 
-## External libraries used
+This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
 
-- [Bootstrap](http://getbootstrap.com/css/)
-- [FeatherLight.js](http://noelboss.github.io/featherlight/) (Gallery)
-- [jQuery](https://jquery.com/)
+If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
 
-## Installation
+# 3 steps to setup this theme at your website!
 
-```
-$ git clone https://github.com/klugjo/hexo-theme-clean-blog.git themes/clean-blog
-```
+Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps and a [wiki](https://github.com/jarrekk/Jalpc/wiki/How-to-add-posts) of how to add posts. If you have any **questions** please ask me at [GitHub Issues](https://github.com/jarrekk/Jalpc/issues).
 
-Then update your blog's main `_config.yml` to set the theme to `clean-blog`:
+# Features
 
-```
-# Extensions
-## Plugins: http://hexo.io/plugins/
-## Themes: http://hexo.io/themes/
-theme: clean-blog
-```
+## Index page
 
-## Configuration
+The index page is seprated into several sections and they are located in `_includes/sections`,the configuration is in `_data/landing.yml` and section's detail configuration is in `_data/*.yml`.
 
-### Menu
+### `_data/*.yml`
 
-The menu is configured in the theme's `_config.yml`.
+These files are used to dynamically render pages, so you almost don't have to edit *html files* to change your own theme, besides you can use `jekyll serve --watch` to reload changes.
 
-```
-# Header
-menu:
-  Home: /
-  Archives: /archives
-  Github:
-    url: https://github.com/klugjo/hexo-theme-clean-blog
-    icon: github
-```
+The following is mapping between *yml files* to *sections*.
 
-The object key is the label and the value is the path, or you can use a icon (font awesome) like menu item.
+* landing.yml ==> index.html
+* index/language.yml ==> index.html
+* index/careers.yml  ==>  _includes/sections/career.html
+* index/skills.yml  ==>  _includes/sections/skills.html
+* index/projects.yml  ==>  _includes/sections/projects.html
+* index/links.yml  ==>  _includes/sections/links.html
 
-### Top Left Label
+This *yml file* is about blog page navbar
 
-The top left label is configured in the theme's `_config.yml`. When clicked it will lead to the Home Page.
+* blog.yml ==> _includes/header.html
 
-```
-# Title on top left of menu. Leave empty to use main blog title
-menu_title: Configurable Title
-```
+The following is mapping between *yml files* to *donation*
 
-### Home Page cover image
+* donation/donationlist.yml ==> blog/donate.html
+* donation/alipay.yml  ==>  blog/donate.html
+* donation/wechat_pay.yml ==> blog/donate.yml
 
-The Home Page cover is configured in the theme's `_config.yml`. It will be the same for all index type pages.
+## Chart Skills
 
-```
-# URL of the Home page image
-index_cover: /img/home-bg.jpg
-```
+I use [Chart.js](http://www.chartjs.org/) to show skills, the type of skills' chart is radar, if you want to custom, please read document of Chart.js and edit **_includes/sections/skills.html** and **_data/index/skills.yml**.
 
-### Default post title
+## Categories in blog page
 
-The default post title (used when no title is specified) is configured in the theme's `_config.yml`.
+In blog page, we categorize posts into several categories by url, all category pages use same template html file - `_includes/category.html`.
 
-```
-# Default post title
-default_post_title: Untitled
-```
+For example: URL is `http://127.0.0.1:4000/python/`. In `_data/blog.yml`, we define this category named `Python`, so in `_includes/category.html` we get this URL(/python/) and change it to my category(Python), then this page are posts about **Python**. The following code is about how to get url and display corresponding posts in  `_includes/category.html`.
 
-### Comments
-
-The comments provider is specified in the theme's `_config.yml`. If you specify both a `disqus_shortname` and a `facebook.appid` there will be 2 sets of comment per post. So choose one.
-
-```
-# Comments. Choose one by filling up the information
-comments:
-  # Disqus comments
-  disqus_shortname: klugjotest
-  # Facebook comments
-  facebook:
-    appid: 123456789012345
-    comment_count: 5
-    comment_colorscheme: light
-```
-
-You can too hide the comment in the posts front-matter:
-
-```
-comment: false
----
+```html
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <div class="navy-line"></div>
+        {% assign category = page.url | remove:'/' | capitalize %}
+        {% if category == 'Html' %}
+        {% assign category = category | upcase %}
+        {% endif %}
+        <h1>{{ category }}</h1>
+    </div>
+</div>
+<div class="wrapper wrapper-content  animated fadeInRight blog">
+    <div class="row">
+        <ul id="pag-itemContainer" style="list-style:none;">
+            {% assign counter = 0 %}
+            {% for post in site.categories[category] %}
+            {% assign counter = counter | plus: 1 %}
+            <li>
 ```
 
-### Google Analytics
+## Pagination
 
-The Google Analytics Tracking ID is configured in the theme's `_config.yml`.
+The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jarrekk.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
 
-```
-# Google Analytics Tracking ID
-google_analytics:
-```
+## Page views counter
 
-### Addthis
+Many third party page counter platforms are too slow,so I count my website page view myself,the javascript file is [static/js/count.min.js](https://github.com/jarrekk/jalpc_jekyll_theme/blob/gh-pages/static/js/count.min.js) ([static/js/count.js](https://github.com/jarrekk/jalpc_jekyll_theme/blob/gh-pages/static/js/count.js)),the backend API is written with flask on [Vultr VPS](https://www.vultr.com/), detail code please see [ztool-backhend-mongo](https://github.com/Z-Tool/ztool-backhend-mongo).
 
-The Addthis ID is configured in the theme's `_config.yml`.
+## Multilingual Page
 
-```
-# Addthis ID
-addthis:
-```
+The landing page has multilingual support with the [i18next](http://i18next.com) plugin.
 
-### Social Account
+Languages are configured in the `_data/index/language.yml` file.
 
-Setup the links to your social pages in the theme's `_config.yml`. Links are in the footer.
+> Not everyone needs this feature, so I make it very easy to remove it, just clear content in file `_data/language.yml` and folder `static/locales/`.
 
-```
-# Social Accounts
-twitter_url:
-facebook_url:
-github_url: https://github.com/klugjo/hexo-theme-clean-blog
-linkedin_url:
-mailto:
-```
+About how to custom multilingual page, please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Multilingual-Page).
 
-### Author
+## Web analytics
 
-The post's author is specified in the posts front-matter:
+I use [Google analytics](https://www.google.com/analytics/) and [GrowingIO](https://www.growingio.com/) to do web analytics, you can choose either to realize it,just register a account and replace id in `_config.yml`.
 
-```
-author: Klug Jo
----
-```
+## Comment
 
-### Post's Cover Image
+I use [Disqus](https://disqus.com/) to realize comment. You should set disqus_shortname and get public key and then, in `_config.yml`, edit the disqus value to enable Disqus.
 
-By default, posts will use the home page cover image. You can specify a custom cover in the front-matter:
+## Share
 
-```
-title: Excerpts
-date: 2013-12-25 00:23:23
-tags: ["Excertps"]
-cover: /assets/contact-bg.jpg
----
-```
+I use [AddToAny](https://www.addtoany.com/) to share my blog on other social network platform. You can go to this website to custom your share buttons and paste code at `_includes/share.html`.
 
-### Post's Share Cover Image
+![share](https://github.com/jarrekk/Jalpc/raw/master/readme_files/share.png)
 
-You can specify a custom cover to share yours posts in social medias:
+## Search engines
 
-```
-share_cover: /assets/contact-bg.jpg
----
-```
+I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this [repository](https://github.com/androiddevelop/jekyll-search). Just use it.
 
-### Post's Excerpt
+![search](https://github.com/jarrekk/Jalpc/raw/master/readme_files/search.gif)
 
-This theme does not support traditional excerpts. To show excerpts on the index page, use `subtitle` in the front-matter:
+## Compress CSS and JS files
 
-```
-title: Excerpts
-date: 2013-12-25 00:23:23
-tags: ["Excertps"]
-subtitle: Standard Excerpts are not supported in Clean Blog but you can use subtitles in the front matter to display text in the index.
----
+All CSS and JS files are compressed at `/static/assets`.
+
+I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://github.com/jakubpawlowicz/clean-css) to compress CSS and JS files, customised CSS files are at `_sass` folder which is feature of [Jekyll](https://jekyllrb.com/docs/assets/). If you want to custom CSS and JS files, you need to do the following:
+
+1. Install [NPM](https://github.com/npm/npm) then install **UglifyJS2** and **clean-css**: `npm install -g uglifyjs; npm install -g clean-css`, then run `npm install` at root dir of project.
+2. Compress script is **build.js**
+3. If you want to add or remove CSS/JS files, just edit **build/build.js** and **build/files.conf.js**, then run `npm run build` at root dir of project, link/src files will use new files.
+
+OR
+
+Edit CSS files at `_sass` folder.
+
+# Put in a Jalpc Plug
+
+If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jarrekk.com>, that'd be awesome. No worries if you don't.
+
+# Upgrading Jalpc
+
+Jalpc is always being improved by its users, so sometimes one may need to upgrade.
+
+## Ensure there's an upstream remote
+
+If `git remote -v` doesn't have an upstream listed, you can do the following to add it:
 
 ```
-
-## Tags page.
-
-> Follow these steps to add a `tags` page that contains all the tags in your site.
-
-- Create a page named `tags`
-
-```
-$ hexo new page "tags"
+git remote add upstream https://github.com/jarrekk/Jalpc.git
 ```
 
-- Edit the newly created page and set page type to `tags` in the front matter.
+## Pull in the latest changes
 
 ```
-title: All tags
-type: "tags"
+git pull upstream gh-pages
 ```
 
-- Add `tags` to the menu in the theme `_config.yml`:
+There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
+
+# Testing Locally
+To test your site locally, you’ll need
+
+- [ruby](https://www.ruby-lang.org/en/)
+- the [github-pages](https://github.com/github/pages-gem) gem
+
+## Installing ruby
+There are [lots of different ways to install ruby](https://www.ruby-lang.org/en/documentation/installation/).
+
+In Mac OS X, older versions of ruby will already be installed. But I use the [Ruby Version Manager (RVM)](https://rvm.io/) to have a more recent version. You could also use [Homebrew](https://brew.sh/).
+
+In Windows, use [RubyInstaller](https://rubyinstaller.org/). (In most of this tutorial, I’ve assumed you’re using a Mac or some flavor of Unix. It’s possible that none of this was usable for Windows folks. Sorry!)
+
+## Installing the github-pages gem
+Run the following command:
 
 ```
-# Header
-menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
+gem install github-pages
 ```
 
-## Categories page.
+This will install the github-pages gem and all dependencies (including [jekyll](https://jekyllrb.com/)).
 
-> Follow these steps to add a `categories` page that contains all the categories in your site.
-
-- Create a page named `categories`
+## Later, to update the gem, type:
 
 ```
-$ hexo new page "categories"
+gem update github-pages
 ```
 
-- Edit the newly created page and set page type to `categories` in the front matter.
+Testing your site locally
+To construct and test your site locally, go into the directory and type
 
 ```
-title: All categories
-type: "categories"
+jekyll build
 ```
 
-- Add `Categories` to the menu in the theme `_config.yml`:
+This will create (or modify) a `_site/ directory`, containing everything from `assets/`, and then the `index.md` and all `pages/*.md` files, converted to html. (So there’ll be `_site/index.html` and the various `_site/pages/*.html.`)
+
+Type the following in order to “serve” the site. This will first run build, and so it does not need to be preceded by `jekyll build`.
 
 ```
-# Header
-menu:
-  Home: /
-  Archives: /archives
-  Categories: /categories
+jekyll serve
 ```
 
+Now open your browser and go to `http://localhost:4000/site-name/`
 
-## Creator
+# Todo
+- [ ] `jekyll server --watch` mode need to use original CSS/JS files
+- [ ] User can customise index page's section title.
+- [x] Non-github projects also have links.
+- [ ] Add some custom color themes for selection(Nav bar, background, words, dominant hue).
 
-This theme was created by [Blackrock Digital](https://github.com/BlackrockDigital) and adapted for Hexo by [Jonathan Klughertz](http://www.codeblocq.com/).
+# Donate Jalpc
+If this project let you enjoy your blog time, you can give me a cup of coffee :)
 
-## License
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
 
-MIT
+# Wiki
+
+* [Multilingual Page](https://github.com/jarrekk/Jalpc/wiki/Multilingual-Page)
+* [How to add posts](https://github.com/jarrekk/Jalpc/wiki/How-to-add-posts)
+* [Change Log](https://github.com/jarrekk/Jalpc/wiki/Change-Log)
+* [Contributors](https://github.com/jarrekk/Jalpc/wiki/Contributors)
+* [Thanks to the following](https://github.com/jarrekk/Jalpc/wiki/Thanks-to-the-following)
+
+# Ad
+[Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
+
