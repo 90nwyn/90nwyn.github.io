@@ -1,9 +1,9 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Yukinoo
-description: Yukinoo's blog,use Jekyll and github pages.
-keywords: Yukinoo,blog,Jekyll,github,gh-pages
+title: 90NWYN
+description: 90NWYN's blog,use Jekyll and github pages.
+keywords: 90NWYN,blog,Jekyll,github,gh-pages
 baseurl:  /90nwyn.github.io/ # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://90nwyn.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
@@ -11,11 +11,11 @@ img_path: /haibara777.github.io/static/assets/img/blog  # url should be '/homepa
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
-  name: Yukinoo  # Be used at blog posts' author.
-  first_name: Yulong  # Be used at index page about me section.
-  last_name: Zheng  # Be used at index page about me section.
+  name: 90NWYN  # Be used at blog posts' author.
+  first_name: Xinzhe  # Be used at index page about me section.
+  last_name: Li  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
-  github_username: Haibara777  # Leave blank if you don't have now
+  github_username: 90NWYN  # Leave blank if you don't have now
   #linkedin_id: Haibara777 # Leave blank if you don't have now
   facebook_username: profile.php?id=100028577374050  # Leave blank if you don't have now
   twitter_username: YulongZ1  # Leave blank if you don't have now
