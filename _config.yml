@@ -7,7 +7,7 @@ keywords: 90NWYN,blog,Jekyll,github,gh-pages
 baseurl:  /90nwyn.github.io/ # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://90nwyn.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
-img_path: /90nwyn.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+img_path: /90nwyn.github.io/static/assets/img # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
@@ -22,13 +22,13 @@ author:  # change following line to your infomation.
   email: 524451487@qq.com  # Leave blank if you don't have now
   #cv: http://cv.jarrekk.com  # An online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
-  skill_icon1:
-    - name: icon-apache
-    - name: fa-linux
-  skill_icon2:
-    - name: fa-linux
-    - name: icon-apache
-  desc: I wanna # Describe yourself.
+  #skill_icon1:
+  #  - name: icon-apache
+  #  - name: fa-linux
+  #skill_icon2:
+  #  - name: fa-linux
+  #  - name: icon-apache
+  desc: I wanna fly # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
