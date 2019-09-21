@@ -1,10 +1,10 @@
 permalink: /:year:month:day/:title
-url: #Your url here
+url: https://90nwyn.github.io #Your url here
 baseurl: /project
 
 # variables
-name: Your Site Name
-description: Your description here
+name: 90NWYN in 1995
+description: 90NWYN's Data
 google_verification: null
 
 
