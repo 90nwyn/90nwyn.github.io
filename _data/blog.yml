@@ -5,10 +5,6 @@
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
 - name: ACM
   href: /acm/
-
-- name: Cetus
-  href: /cetus/
-
 #- name: Database
 #  href: /database/
 
