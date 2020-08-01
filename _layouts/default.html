@@ -1,78 +1,50 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		{% seo %}
-		{% feed_meta %}
-
-		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
-
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300|Rubik:300">
-		<link rel="stylesheet" href="{{ site.baseurl }}/css/screen.css">
-
-		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
-			<script>
-				window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-				ga('create', '{{ site.google_analytics_key }}', 'auto');
-				ga('send', 'pageview');
-			</script>
-			<script async src='https://www.google-analytics.com/analytics.js'></script>
-		{% endif %}
-	</head>
-
-	<body>
-		<header id="mainHeader">
-			<div class="container">
-				<div class="company-name">
-					<a href="{{ site.baseurl }}/">
-						<span class="dark-logo"><img width="104" height="38" src="{{ site.baseurl }}/images/logo/dark.svg" alt="dark frisco logo"></span>
-						<span class="light-logo"><img width="104" height="38" src="{{ site.baseurl }}/images/logo/light.svg" alt="light frisco logo"></span>
-					</a>
-				</div>
-				{% include navigation.html %}
-				<p class="editor-link"><a style="display:inline;" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a></p>
-			</div>
-		</header>
-
-		{{ content }}
-
-		<footer>
-			<div class="container">
-				<p class="editor-link"><a href="cloudcannon:collections/_data/footer.yml" class="btn"><strong>&#9998;</strong> Edit footer</a></p>
-				<ul class="footer-left-links">
-					{% for link in site.data.footer.left_links %}
-						<li>
-							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
-								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
-								{{ link.name }}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-				<ul class="footer-right-links">
-					{% for link in site.data.footer.right_links %}
-						<li>
-							<a {% if link.new_window %}target="_blank"{% endif %} href="{% include relative-src.html src=link.link %}" {% if link.social_icon %}class="{{ link.social_icon | slugify }}-icon"{% endif %}>
-								{% if link.social_icon %}{% include social-icon.html icon=link.social_icon %}{% endif %}
-								{{ link.name }}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-				<p class="copyright">
-					<a href="https://cloudcannon.com/">
-						Template by CloudCannon
-					</a>
-				</p>
-			</div>
-		</footer>
-
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="{{ site.baseurl }}/js/main.js"></script>
-	</body>
+<html lang="{{site.data.site.lang}}">
+    {% include head.html %}
+    <body>
+        {% include component/totop.html %}
+        {% include header/header.html %}
+        <div class="mdui-container container">
+            <section class="content">
+                {{ content }}
+            </section>
+        </div>
+        {% if site.data.site.google_analytics != "" %}
+        {% include analytics/google.html %}
+        {% endif %}
+        {% if site.data.site.baidu_auto_push == true %}
+        {% include submission/baidu.html %}
+        {% endif %}
+        {% include component/sw.html %}
+        {% include component/customCssJS.html %}
+        {% include footer/footer.html %}
+        {% if site.data.site.uiux.meng == true%}
+            {% if site.data.meng.live2d.switch == true %}
+                {% include meng/live2d.html %}
+            {% endif %}
+            {% if site.data.meng.title.switch == true %}
+                {% include meng/title.html %}
+            {% endif %}
+            {% if site.data.meng.cursor.switch == true %}
+                {% include meng/cursor.html %}
+            {% endif %}
+            {% if site.data.meng.console.switch == true %}
+                {% include meng/console.html %}
+            {% endif %}
+            {% if site.data.meng.background.switch == true %}
+                {% include meng/background.html %}
+            {% endif %}
+            {% if site.data.meng.card.switch == true %}
+                {% include meng/card.html %}
+            {% endif %}
+            {% if site.data.meng.music_player.player == "cplayer" %}
+                {% include meng/cplayer.html %}
+            {% elsif  site.data.meng.music_player.player == "aplayer"%}
+                {% include meng/aplayer.html %}
+            {% endif %}
+        {% endif %}
+    </body>
 </html>

@@ -1,76 +1,88 @@
-# Frisco
+![](/jekylltheme.jpg)
 
-App promotion themed template for Jekyll. Browse through a [live demo](https://brave-submarine.cloudvent.net/).
-Increase the web presence of a App with this configurable theme.
+# Jekyll Theme MDUI
 
-![Frisco template screenshot](images/_screenshot.jpg)
+> A Jekyll theme based on mdui
 
-Frisco was made by [CloudCannon](http://cloudcannon.com/), the Cloud CMS for Jekyll.
+> 主题停更，只做兼容性维护。期待 V2 吧！
 
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Academy](https://learn.cloudcannon.com/).
+## Contents
 
-## Features
+* [General](#general)
+* [Demo](#demo)
+* [Quick start](#quick-start)
+* [Docs](#docs)
+* [TODO](#todo)
+* [Note](#note)
+* [Contributing](#contributing)
+* [Development](#development)
+* [License](#license)
 
-* Contact form
-* Pre-built pages
-* Pre-styled components
-* Blog with pagination
-* Post category pages
-* Disqus comments for posts
-* Staff and author system
-* Configurable footer
-* Optimised for editing in [CloudCannon](http://cloudcannon.com/)
-* RSS/Atom feed
-* SEO tags
-* Google Analytics
+## General
 
-## Setup
+[![Version](https://img.shields.io/badge/version-0.5.4-green.svg?style=flat-square)]()
+[![Jekyll](https://img.shields.io/badge/Jekyll-3.5+-green.svg?style=flat-square)](https://jekyllrb.com/)
+[![Gem](https://img.shields.io/gem/dt/jekyll-theme-mdui.svg?style=flat-square)](https://rubygems.org/gems/jekyll-theme-mdui/)
 
-1. Add your site and author details in `_config.yml`.
-2. Add your Google Analytics and Disqus keys to `_config.yml`.
-3. Get a workflow going to see your site's output (with [CloudCannon](https://app.cloudcannon.com/) or Jekyll locally).
+[![Code Climate](https://img.shields.io/codeclimate/maintainability/KeJunMao/jekyll-theme-mdui.svg?style=flat-square&label=code%20climate)](https://codeclimate.com/github/KeJunMao/jekyll-theme-mdui/)
+[![Build Status](https://img.shields.io/travis/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://travis-ci.org/KeJunMao/jekyll-theme-mdui)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 
-## Develop
+[![Author](https://img.shields.io/badge/author-KeJun-blue.svg?style=flat-square)](https://blog.kejun.me)
 
-Frisco was built with [Jekyll](http://jekyllrb.com/) version 3.3.1, but should support newer versions as well.
+## Demo
 
-Install the dependencies with [Bundler](http://bundler.io/):
+[KeJun's Blog](https://blog.kejun.me)
 
-~~~bash
-$ bundle install
-~~~
+## Quick start
 
-Run `jekyll` commands through Bundler to ensure you're using the right versions:
+[Quick start](http://mdui.kejun.me/#/quickstart)
 
-~~~bash
-$ bundle exec jekyll serve
-~~~
+[快速开始](http://mdui.kejun.me/#/zh-cn/quickstart)
 
-## Editing
+## Docs
 
-Frisco is already optimised for adding, updating and removing pages, staff, advice, company details and footer elements in CloudCannon.
+[Docs](http://mdui.kejun.me/#/)(!!!Need Help!!!)
 
-### Posts
+[中文文档](http://mdui.kejun.me/#/zh-cn/)
 
-* Add, update or remove a post in the *Posts* collection.
-* The **Staff Author** field links to members in the **Staff Members** collection.
-* Documentation pages are organised in the navigation by category, with URLs based on the path inside the `_docs` folder.
-* Change the defaults when new posts are created in `_posts/_defaults.md`.
+## TODO
 
-### Contact Form
+- [ ] V2
 
-* Preconfigured to work with CloudCannon, but easily changed to another provider (e.g. [FormSpree](https://formspree.io/)).
+## Note
 
-### Staff
+File Required or Optional:
 
-* Reused around the site to save multiple editing locations.
+|files|Required or Optional|Description|
+|---  |---                 |---        |
+|mainifest.json|Optional   |Is the only file that every WebExtension must contain.See [here](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/manifest.json).|
+|sw.js|Optional            |Service Workers.See [here](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers).|
+|search.json|Optional|If you use the search page, it is required.|
+|tags.json|Optional|If you use the tags page, it is required.|
+|_data/friends.yml|Optional|If you use the friends page, it is required.|
+|_data/sns.yml|Optional|It is footer sns,if you want used, it is required.|
+|_data/meng.yml|Optional|It is Meng option,if you want used, it is required.|
+|_data/site.yml|Required|It is theme config.|
+|_data/lang.yml|Required|It is language config.|
+|_data/menus.yml|Required|It is site menus config.|
 
-### Footer
+How to use? See Docs.
 
-* Exposed as a data file to give clients better access.
-* Set in the *Data* / *Navigation* section.
+## Contributing
 
-### Footer
+Bug reports and pull requests are welcome on GitHub at https://github.com/KeJunMao/jekyll-theme-mdui. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-* Exposed as a data file to give clients better access.
-* Set in the *Data* / *Footer* section.
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, and `assets` tracked with Git will be released.
+
+## License
+
+[![license](https://img.shields.io/github/license/KeJunMao/jekyll-theme-mdui.svg?style=flat-square)](https://github.com/KeJunMao/jekyll-theme-mdui/blob/master/LICENSE.txt)
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

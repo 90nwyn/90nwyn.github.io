@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-
-<section class="hero" style="background-image: url({% include relative-src.html src=page.image %})">
-	<div class="inner-hero text-container">
-		<div class="hero-text-container">
-			<h1>{{ page.title }}</h1>
-			<p class="subtext">{{ page.description }}</p>
-		</div>
-	</div>
-</section>
-
-{{ content }}
+    {% if site.data.site.uiux.meng == true %}
+    {% if site.data.meng.head_card.switch == true %}
+            {% assign num = site.data.meng.head_card.offset_level %}
+            {% for i in (1..num) %}
+                <div class="head_card-offset"></div>
+            {% endfor %}
+    {% endif %}
+    {% endif %}
+{% include content/page_content_no_toc.html %}
+{% include content/component/imgboxed.html %}
